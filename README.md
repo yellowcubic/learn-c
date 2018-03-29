@@ -4,8 +4,8 @@
 ## หัวข้อที่ผมเรียนไปแล้ว
 * set up project in c++ builder
 * data types
-* variables
-* if else
+* variablesa
+* if elsea
 * RAD Studio compiler
 * c language syntaxes
 * debugging

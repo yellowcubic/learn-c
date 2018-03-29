@@ -8,4 +8,4 @@
 * if else
 * RAD Studio compiler
 * c language syntaxes
-* debuging
+* debugging

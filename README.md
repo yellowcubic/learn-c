@@ -5,7 +5,7 @@
 * set up project in c++ builder
 * data types
 * variables
-* if else
+* if then else
 * RAD Studio compiler
 * c language syntaxes
 * debugging

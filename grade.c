@@ -16,19 +16,10 @@ int _tmain(int argc, _TCHAR* argv[]) {
 	printf("Please enter your score:");
 	scanf("%d", &score); // scan integer input into score's address
 	if (score >= 80) {
-		printf("Your score is %d, you get an A", score);
-	}
-	if (score >= 70) {
-		printf("Your score is %d, you get a B", score);
-	}
-	if (score >= 60) {
-		printf("Your score is %d, you get a C", score);
-	}
-	if (score >= 50) {
-		printf("Your score is %d, you get a D", score);
+		printf("Your score is %d, you get A", score);
 	}
 	else {
-		printf("Your score is %d, you have failed your test", score);
+		printf("Your score is less than 80");
 	}
 
 	getchar();

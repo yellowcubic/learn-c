@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{BD4FAA6A-CA4D-48A6-98CE-AEDF9BA0AC38}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="grading\Grading.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="day6\day6.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Grading">
+        <MSBuild Projects="grading\Grading.cbproj"/>
+    </Target>
+    <Target Name="Grading:Clean">
+        <MSBuild Projects="grading\Grading.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Grading:Make">
+        <MSBuild Projects="grading\Grading.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="day6">
+        <MSBuild Projects="day6\day6.cbproj"/>
+    </Target>
+    <Target Name="day6:Clean">
+        <MSBuild Projects="day6\day6.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="day6:Make">
+        <MSBuild Projects="day6\day6.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Grading;day6"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Grading:Clean;day6:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Grading:Make;day6:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
